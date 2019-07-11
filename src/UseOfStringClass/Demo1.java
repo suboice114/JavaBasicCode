@@ -19,9 +19,9 @@ public class Demo1 {
 
         String s2 = "asdfghjkl";
 
-        System.out.println("s1=s2:"+(s1==s2));
+        System.out.println("s1=s2:" + (s1 == s2));
 
-        System.out.println("s1.equals(s2):"+(s1.equals(s2)));
+        System.out.println("s1.equals(s2):" + (s1.equals(s2)));
 
         /**
          * 情景二：关于 new String("")
@@ -30,17 +30,17 @@ public class Demo1 {
 
         String s4 = new String("asdfghjkl");
 
-        System.out.println("s3=s4:"+(s3==s4));
+        System.out.println("s3=s4:" + (s3 == s4));
 
-        System.out.println("s3.equals(s4):"+(s3.equals(s4)));
+        System.out.println("s3.equals(s4):" + (s3.equals(s4)));
 
-        System.out.println("s1=s3:"+(s1==s3));
+        System.out.println("s1=s3:" + (s1 == s3));
 
-        System.out.println("s1.equals(s3):"+(s1.equals(s3)));
+        System.out.println("s1.equals(s3):" + (s1.equals(s3)));
 
 
-        String s5 = "asdf"+"ghjkl";
-        System.out.println("s1=s5:"+(s1==s5));
+        String s5 = "asdf" + "ghjkl";
+        System.out.println("s1=s5:" + (s1 == s5));
 
         /**
          *  情景四： *******
@@ -61,10 +61,10 @@ public class Demo1 {
          */
         String str6 = "qwer";
         String str7 = "tyui";
-        String str8 = str6+str7;
+        String str8 = str6 + str7;
         String str9 = "qwertyui";
-        System.out.println("str8=str9:"+(str8==str9));
-        System.out.println("str8.equals(str9)："+(str8.equals(str9)));
+        System.out.println("str8=str9:" + (str8 == str9));
+        System.out.println("str8.equals(str9)：" + (str8.equals(str9)));
 
 
         /**
@@ -75,13 +75,13 @@ public class Demo1 {
         String str = "poi,uyt,rew,qll";
 
         String[] split = str.split(",");    //自动补全变量名称 : Ctrl + Alt + v
-        System.out.println("split[0]:"+split[0]);
+        System.out.println("split[0]:" + split[0]);
 
         String subStr1 = str.substring(4);
-        System.out.println("subStr1:"+subStr1);
+        System.out.println("subStr1:" + subStr1);
 
         String subStr2 = str.substring(4, 8);
-        System.out.println("subStr2:"+subStr2);
+        System.out.println("subStr2:" + subStr2);
 
 
         /**
@@ -89,12 +89,12 @@ public class Demo1 {
          * 如果需要对字符串做很多修改，那么应该选择使用StringBuffer & StringBuilder 类。（字符串变量）
          *
          * String类中使用字符数组保存字符串， 如下就是，因为有“final”修饰符，所以可以知道string对象是不可变的。
-         * 　　　　
+         *
          *          private final char value[];
          *
          * StringBuilder与 StringBuffer都继承自 AbstractStringBuilder 抽象类，
          *  在 AbstractStringBuilder 中也是使用字符数组保存字符串，如下就是，可知这两种对象都是可变的。
-         * 　　　　
+         *
          *          char[] value;
          *
          *
@@ -112,12 +112,12 @@ public class Demo1 {
 
         StringBuilder sbd = new StringBuilder();
         String sbdStr = sbd.append("zxc").append("vbnm").toString();
-        System.out.println("sbdStr:"+sbdStr);
+        System.out.println("sbdStr:" + sbdStr);
 
 
         StringBuffer sbf = new StringBuffer();
         String sbfStr = sbf.append("iop").append("dfhgj").toString();
-        System.out.println("sbfStr:"+sbfStr);
+        System.out.println("sbfStr:" + sbfStr);
 
 
     }

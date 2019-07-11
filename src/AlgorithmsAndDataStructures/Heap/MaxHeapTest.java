@@ -5,7 +5,7 @@ package AlgorithmsAndDataStructures.Heap;
  */
 public class MaxHeapTest {
     public static void main(String[] args) {
-        Integer[] arrT = {11,3,76,35,22,90,111,88,53};
+        Integer[] arrT = {11, 3, 76, 35, 22, 90, 111, 88, 53};
 
         int k = 5;
         Integer[] data = new Integer[k];
@@ -16,7 +16,6 @@ public class MaxHeapTest {
 
         MaxHeap heap = new MaxHeap(data);
         for (int i = k; i < arrT.length; i++) {
-
 
 
         }

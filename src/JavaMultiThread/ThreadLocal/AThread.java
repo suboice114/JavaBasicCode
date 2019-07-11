@@ -1,8 +1,8 @@
 package JavaMultiThread.ThreadLocal;
 
-public class AThread implements Runnable{
+public class AThread implements Runnable {
 
-   private static ThreadLocal<Integer> threadLocal =   new ThreadLocal<>();
+    private static ThreadLocal<Integer> threadLocal = new ThreadLocal<>();
 
 
     @Override
@@ -11,7 +11,7 @@ public class AThread implements Runnable{
 
             threadLocal.set(i);
 
-            System.out.println(Thread.currentThread().getName()+ " threadLocal.get() = " + threadLocal.get());
+            System.out.println(Thread.currentThread().getName() + " threadLocal.get() = " + threadLocal.get());
 
         }
     }

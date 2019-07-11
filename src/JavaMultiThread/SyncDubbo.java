@@ -6,28 +6,28 @@ package JavaMultiThread;
  */
 public class SyncDubbo {
     public static void main(String[] args) {
-       final  SyncDubbo syncDubbo = new SyncDubbo();
+        final SyncDubbo syncDubbo = new SyncDubbo();
 
-       new Thread(new Runnable() {
-           @Override
-           public void run() {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
                 syncDubbo.method1();
-           }
-       }).start();
+            }
+        }).start();
     }
 
 
-    public synchronized void  method1(){
+    public synchronized void method1() {
         System.out.println("method1 ————");
         method2();
     }
 
-    public synchronized void method2(){
+    public synchronized void method2() {
         System.out.println("method2 ————");
         method3();
     }
 
-    public  synchronized  void  method3(){
+    public synchronized void method3() {
         System.out.println("method3 ————");
     }
 }

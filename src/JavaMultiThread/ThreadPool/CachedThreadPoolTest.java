@@ -7,7 +7,6 @@ import java.util.concurrent.Executors;
 /**
  * CachedThreadPool
  * 无界线程池，最多可创建Integer.MAX_VALUE =  0x7fffffff 个线程，运行结果没有重复的线程号
- *
  */
 public class CachedThreadPoolTest {
     public static void main(String[] args) {

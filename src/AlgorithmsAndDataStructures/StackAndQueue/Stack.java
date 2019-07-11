@@ -9,11 +9,11 @@ public class Stack {
     public Node current;
 
     //入栈
-    public void push(int data){
-        if (head == null){
+    public void push(int data) {
+        if (head == null) {
             head = new Node(data);
             current = head;
-        }else {
+        } else {
             Node node = new Node(data);
             node.pre = current; //current结点将作为当前结点的前驱结点
             current = node;     //让current结点永远指向新添加的那个结点
@@ -21,9 +21,9 @@ public class Stack {
     }
 
 
-    public Node pop(){
+    public Node pop() {
 
-        if (current == null){
+        if (current == null) {
             return null;
         }
 
@@ -31,7 +31,6 @@ public class Stack {
         current = current.pre;   //每出栈一个结点后，current后退一位
         return node;
     }
-
 
 
     class Node {

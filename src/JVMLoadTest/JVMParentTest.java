@@ -11,18 +11,18 @@ public class JVMParentTest {
 
     }
 
-    static{
+    static {
         System.out.println("parent static's count:" + count);           //静态代码块
 
     }
 
-    JVMParentTest(int a){       //有参构造函数
+    JVMParentTest(int a) {       //有参构造函数
 
         System.out.println("parent init one parameter");
 
     }
 
-    JVMParentTest(){           //无参构造函数
+    JVMParentTest() {           //无参构造函数
 
         System.out.println("parent init");
 

@@ -3,13 +3,13 @@ package JavaDesignPatterns.Proxy;
 /**
  * 学生代理类，也实现了Person接口
  */
-public class StudentsProxy implements  Person{
+public class StudentsProxy implements Person {
 
     Student stu;    //被代理的学生
 
-    public  StudentsProxy (Person stu){
+    public StudentsProxy(Person stu) {
         //只代理学生对象
-        if (stu.getClass() == Student.class){
+        if (stu.getClass() == Student.class) {
             this.stu = (Student) stu;
         }
     }

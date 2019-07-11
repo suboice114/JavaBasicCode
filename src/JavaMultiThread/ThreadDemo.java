@@ -1,6 +1,6 @@
 package JavaMultiThread;
 
-public class ThreadDemo extends  Thread{
+public class ThreadDemo extends Thread {
 
     private int count = 5;
 
@@ -20,10 +20,10 @@ public class ThreadDemo extends  Thread{
 
 
     @Override
-    public void run(){
-        synchronized (this){     //synchronized后面括号里是一对象,此时,线程获得的是对象锁
+    public void run() {
+        synchronized (this) {     //synchronized后面括号里是一对象,此时,线程获得的是对象锁
             count--;
-            System.out.println(currentThread().getName()+" count:"+count);
+            System.out.println(currentThread().getName() + " count:" + count);
         }
     }
 

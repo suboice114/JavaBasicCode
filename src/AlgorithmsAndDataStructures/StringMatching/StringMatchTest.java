@@ -15,35 +15,35 @@ import java.util.Stack;
  */
 public class StringMatchTest {
 
-    public static boolean isMatch(String s){
+    public static boolean isMatch(String s) {
 
         //使用map定义左右字符串的对应关系
-        Map<Character,Character> bracket  = new HashMap<>();
-        bracket.put(')','(');
-        bracket.put(']','[');
-        bracket.put('}','{');
+        Map<Character, Character> bracket = new HashMap<>();
+        bracket.put(')', '(');
+        bracket.put(']', '[');
+        bracket.put('}', '{');
 
         Stack stack = new Stack();
-        
+
         //遍历字符串S
         for (int i = 0; i < s.length(); i++) {
-            Character temp  = s.charAt(i);  //先转换成字符
+            Character temp = s.charAt(i);  //先转换成字符
 
             //是否为左括号 -> 将 左括号 push到栈中
-            if(bracket.containsValue(temp)){
+            if (bracket.containsValue(temp)) {
                 stack.push(temp);
 
-            //是否是右括号
-            }else if (bracket.containsKey(temp)){
+                //是否是右括号
+            } else if (bracket.containsKey(temp)) {
 
-                if (stack.isEmpty()){   //栈为空 栈顶没有字符与右括号匹配
+                if (stack.isEmpty()) {   //栈为空 栈顶没有字符与右括号匹配
                     return false;
                 }
 
                 // 左右括号匹配
-                if(stack.peek() == bracket.get(temp)){
+                if (stack.peek() == bracket.get(temp)) {
                     stack.pop();
-                }else {
+                } else {
                     return false;
                 }
             }

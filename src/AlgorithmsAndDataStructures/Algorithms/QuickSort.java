@@ -8,20 +8,20 @@ public class QuickSort {
 
     public static void main(String[] args) {
 
-        int[] arr = {6,1,2,2,7,9,3,10,8,15,22};
+        int[] arr = {6, 1, 2, 2, 7, 9, 3, 10, 8, 15, 22};
         quickSort(arr);
     }
 
     private static void quickSort(int[] arr) {
-        sort(arr,0,arr.length-1);
-        for(int i:arr){
-            System.out.println("i="+i);
+        sort(arr, 0, arr.length - 1);
+        for (int i : arr) {
+            System.out.println("i=" + i);
         }
     }
 
-    private static void sort(int[] arr,int low,int high){
+    private static void sort(int[] arr, int low, int high) {
 
-        if(low>high){
+        if (low > high) {
             return;
         }
         int i = low;    //数组第一位
@@ -32,12 +32,12 @@ public class QuickSort {
         int t;
         while (i < j) {
             //先看右边，依次往左递减
-            while (temp<=arr[j] && i<j) {
+            while (temp <= arr[j] && i < j) {
                 j--;
             }
 
             //再看左边，依次往右递增
-            while (temp>=arr[i] && i<j) {
+            while (temp >= arr[i] && i < j) {
                 i++;
             }
 
@@ -54,10 +54,10 @@ public class QuickSort {
         arr[i] = temp;
 
         //递归调用左半数组
-        sort(arr, low, j-1);
+        sort(arr, low, j - 1);
 
         //递归调用右半数组
-        sort(arr, j+1, high);
+        sort(arr, j + 1, high);
     }
 
 }

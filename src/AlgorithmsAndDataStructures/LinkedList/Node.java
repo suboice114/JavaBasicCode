@@ -7,7 +7,8 @@ public class Node {
 
     Node next = null;   //下一个节点
     private int data;           //节点数据
-    public Node(int data){
+
+    public Node(int data) {
         this.data = data;
     }
 

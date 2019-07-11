@@ -25,16 +25,17 @@ public class QueueStack {
 
     //pop()
     public synchronized Integer pop() {
-        if (q1.size()==0){
+        if (q1.size() == 0) {
             System.out.println("栈为空！");
-        }if(q1.size()==1) {
+        }
+        if (q1.size() == 1) {
             return q1.poll();
-        }else {
-            while(q1.size()!=1) {
+        } else {
+            while (q1.size() != 1) {
                 q2.add(q1.poll());
             }
-            Integer tem= q1.poll();
-            while(!q2.isEmpty()) {
+            Integer tem = q1.poll();
+            while (!q2.isEmpty()) {
                 q1.add(q2.poll());
             }
             return tem;
@@ -43,7 +44,7 @@ public class QueueStack {
 
     public static void main(String[] args) {
 
-        QueueStack qs  = new QueueStack();
+        QueueStack qs = new QueueStack();
 
         qs.push(13);
         qs.push(23);

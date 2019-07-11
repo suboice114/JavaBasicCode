@@ -5,7 +5,8 @@ package JavaMultiThread.ProducterAndCustomer;
  */
 public class Customer implements Runnable {
     private Food food;
-    public Customer(Food food){
+
+    public Customer(Food food) {
         this.food = food;
     }
 

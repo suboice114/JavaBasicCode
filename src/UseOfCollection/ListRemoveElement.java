@@ -20,7 +20,7 @@ public class ListRemoveElement {
 
         //1 .统计list中重复元素的方法：使用Collections.frequency(Collection<?> c,Object o)
         int count = Collections.frequency(alist, "abc");
-        System.out.println("abc出现的次数："+count);
+        System.out.println("abc出现的次数：" + count);
 
 
         //2 去除list集合中重复元素
@@ -42,6 +42,7 @@ public class ListRemoveElement {
 
     /**
      * 方法一:使用HashSet
+     *
      * @param list
      */
     public static void removeList(List list) {
@@ -53,6 +54,7 @@ public class ListRemoveElement {
 
     /**
      * 方法二：使用双层for循环
+     *
      * @param alist
      * @return
      */

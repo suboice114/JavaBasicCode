@@ -6,7 +6,7 @@ package JVMLoadTest;
  */
 public class JVMTest {
 
-    static{
+    static {
         System.out.println("Main 方法所在类的静态代码块 static 1");
     }
 
@@ -18,22 +18,22 @@ public class JVMTest {
         System.out.println(a.width);
     }
 
-    static{
+    static {
         System.out.println("Main 方法所在类的静态代码块 static 2");
     }
 }
 
 
-class A{
+class A {
 
     public static int width = 100;
 
-    static{
+    static {
         System.out.println("静态初始化类A");
         width = 30;
     }
 
-    public A(){
+    public A() {
         System.out.println("创建A类的对象");
     }
 }

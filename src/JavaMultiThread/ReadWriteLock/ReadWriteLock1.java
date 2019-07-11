@@ -9,13 +9,13 @@ public class ReadWriteLock1 {
     private int writeRequests = 0;
 
     /**
-     *  读锁：
-     *      没有正在写的操作 或者 没有对资源有写的请求 时 ，可进行读取操作，获得读锁
+     * 读锁：
+     * 没有正在写的操作 或者 没有对资源有写的请求 时 ，可进行读取操作，获得读锁
      */
 
     public synchronized void lockRead() throws InterruptedException {
 
-        if(writers > 0 || writeRequests > 0){
+        if (writers > 0 || writeRequests > 0) {
             wait();
         }
 
@@ -24,7 +24,7 @@ public class ReadWriteLock1 {
 
 
     //释放读锁
-    public synchronized void unlockRead(){
+    public synchronized void unlockRead() {
 
         readers--;
 
@@ -34,13 +34,13 @@ public class ReadWriteLock1 {
 
     /**
      * 写锁：
-     *  没有进行读操作 或者 写操作 时，获得写锁
+     * 没有进行读操作 或者 写操作 时，获得写锁
      */
-    public synchronized void lockWrite() throws InterruptedException{
+    public synchronized void lockWrite() throws InterruptedException {
 
         writeRequests++;    //想要获得写锁 写锁请求+1
 
-        if (readers > 0 || writers >0){
+        if (readers > 0 || writers > 0) {
             wait();
         }
 
@@ -49,7 +49,7 @@ public class ReadWriteLock1 {
     }
 
     //释放写锁
-    public synchronized void unlockWrite() throws InterruptedException{
+    public synchronized void unlockWrite() throws InterruptedException {
         writers--;
         notifyAll();
     }

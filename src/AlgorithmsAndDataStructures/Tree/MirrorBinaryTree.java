@@ -6,28 +6,28 @@ import java.util.Queue;
 
 /**
  * 将一个二叉树 转换成其  镜像
- *      8              8
- *   6   10    ->   10     6
+ * 8              8
+ * 6   10    ->   10     6
  * 5  7 9  11    11   9  7   5
- *
+ * <p>
  * 思路：使用递归
- *  从根部开始遍历，如果有子节点，则交换两个子节点，
- *  当交换完所有的非叶子结点的左右子结点之后，就得到了树的镜像
+ * 从根部开始遍历，如果有子节点，则交换两个子节点，
+ * 当交换完所有的非叶子结点的左右子结点之后，就得到了树的镜像
  */
 public class MirrorBinaryTree {
 
-    public void MirrorTree(TreeNode root){
+    public void MirrorTree(TreeNode root) {
 
         //当传入内容为空
-        if (root == null){
+        if (root == null) {
             System.out.println("二叉树为空！");
             return;
         }
 
         //只有 当两个子节点同时为空时不进行换位 ;否则 换位
-        if (root.leftNode == null && root.rightNode == null){
+        if (root.leftNode == null && root.rightNode == null) {
             return;
-        }else {
+        } else {
 
             //左右换位操作
             TreeNode temp = root.leftNode;
@@ -35,47 +35,47 @@ public class MirrorBinaryTree {
             root.rightNode = temp;
 
             //左节点作为新的根节点进行递归
-            if (root.leftNode != null){
+            if (root.leftNode != null) {
                 MirrorTree(root.leftNode);
             }
 
             //右节点作为新的根节点进行递归
-            if (root.rightNode != null){
+            if (root.rightNode != null) {
                 MirrorTree(root.rightNode);
             }
         }
     }
 
     //二叉树
-    static class TreeNode{
+    static class TreeNode {
 
         private int data;
         private TreeNode leftNode; //左节点
         private TreeNode rightNode;//右节点
 
-        public TreeNode(int data){
+        public TreeNode(int data) {
             this.data = data;
         }
     }
 
     //输出一颗数上的值（从根节点开始）
-    public ArrayList<Integer> printTreeFromTop(TreeNode root){
+    public ArrayList<Integer> printTreeFromTop(TreeNode root) {
 
         ArrayList<Integer> list = new ArrayList<Integer>();
-        if (root == null){
+        if (root == null) {
             return list;
         }
 
         Queue<TreeNode> queue = new LinkedList<TreeNode>();
         queue.add(root);
 
-        while (!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             TreeNode treeNode = queue.poll();
             list.add(treeNode.data);
             if (treeNode.leftNode != null) {
                 queue.add(treeNode.leftNode);
             }
-            if (treeNode.rightNode != null)	{
+            if (treeNode.rightNode != null) {
                 queue.add(treeNode.rightNode);
             }
         }

@@ -3,7 +3,7 @@ package JavaMultiThread.Lock;
 /**
  * 买票操作:
  * 结果：未加锁 -> 出票结果存在增加情况
- *       synchronized -> 出票正常
+ * synchronized -> 出票正常
  */
 public class OutTicket {
 

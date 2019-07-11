@@ -3,11 +3,11 @@ package JavaDesignPatterns.Proxy;
 /**
  * 学生类 实现 Person 接口
  */
-public class Student implements  Person {
+public class Student implements Person {
 
     private String name;
 
-    public  Student(String name){
+    public Student(String name) {
         this.name = name;
     }
 

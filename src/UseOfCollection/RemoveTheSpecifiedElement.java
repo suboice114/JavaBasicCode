@@ -22,11 +22,11 @@ public class RemoveTheSpecifiedElement {
          */
 
         for (int i = 0; i < 3; i++) {     //移除后三个元素
-            alist.remove(alist.size()-1);
+            alist.remove(alist.size() - 1);
         }
 
 
-        for (int i = 0; i < alist.size() ; i++) {
+        for (int i = 0; i < alist.size(); i++) {
             System.out.println(alist.get(i));
         }
     }

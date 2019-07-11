@@ -11,7 +11,7 @@ public class DemoOthers {
          * 底层 通过 红黑树 实现，并保证有序性。
          */
         TreeMap<Integer, String> treeMap = new TreeMap<>();
- 
+
         treeMap.put(10, "10");
         treeMap.put(83, "83");
         treeMap.put(15, "15");
@@ -21,8 +21,8 @@ public class DemoOthers {
         treeMap.put(30, "30");
         treeMap.put(50, "50");
 
-        for (Map.Entry<Integer,String> entry: treeMap.entrySet()) {
-            System.out.println("key:"+entry.getKey()+" value:"+entry.getValue());
+        for (Map.Entry<Integer, String> entry : treeMap.entrySet()) {
+            System.out.println("key:" + entry.getKey() + " value:" + entry.getValue());
         }
 
         /**
@@ -44,22 +44,21 @@ public class DemoOthers {
         System.out.println(treeSet);
 
 
-
         /**
          * HashSet 实现Set接口 ，允许使用null元素, 不允许有重复元素
          * 基于 HashMap实现的。
          *      HashSet中的元素都存放在HashMap的key上面，
          *      而value中的值都是统一的一个private static final Object PRESENT = new Object();
          * 即：
-             private transient HashMap<E,Object> map;
-             private static final Object PRESENT = new Object();
-             public HashSet() { map = new HashMap<>();}
+         private transient HashMap<E,Object> map;
+         private static final Object PRESENT = new Object();
+         public HashSet() { map = new HashMap<>();}
 
          HashSet中add方法调用的是底层HashMap中的put()方法
 
          */
 
-        HashMap<Integer,String> hashMap = new HashMap<Integer,String>();
+        HashMap<Integer, String> hashMap = new HashMap<Integer, String>();
 
         HashSet<Integer> hashSet = new HashSet<Integer>();
 

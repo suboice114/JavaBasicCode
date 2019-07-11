@@ -2,7 +2,7 @@ package JavaMultiThread.Lock;
 
 /**
  * 买票操作：
- *   使用 ReentrantLock
+ * 使用 ReentrantLock
  */
 public class OutTicket2 {
     public static void main(String[] args) {
