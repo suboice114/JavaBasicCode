@@ -1,11 +1,11 @@
 package AlgorithmsAndDataStructures.LinkedList;
 
 /**
- * 链表
+ * 单链表
  */
 public class Node {
 
-    Node next = null;   //下一个节点
+    Node next = null;           //下一个节点
     private int data;           //节点数据
 
     public Node(int data) {
