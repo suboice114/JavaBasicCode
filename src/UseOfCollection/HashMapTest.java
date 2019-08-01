@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
-public class DemoMap {
+public class HashMapTest {
     public static void main(String[] args) {
 
         HashMap<Integer, String> map = new HashMap<Integer, String>();
@@ -58,10 +58,6 @@ public class DemoMap {
 
             System.out.println("key:" + entry.getKey() + " value=" + entry.getValue());
         }
-
-
-        ConcurrentHashMap concurrentHashMap = new ConcurrentHashMap();
-
 
     }
 }
